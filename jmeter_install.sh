@@ -1,6 +1,7 @@
 #!/bin/bash
 
 amazon-linux-extras install -y java-openjdk11
+java -version
 
 cd /usr/local/src/
 export JMETER_VERSION=5.3
@@ -10,3 +11,5 @@ mv apache-jmeter-$JMETER_VERSION /usr/local/jmeter
 
 export JMETER_HOME=/usr/local/jmeter
 export PATH=$JMETER_HOME/bin:$PATH
+
+jmeter -v
